@@ -1,0 +1,73 @@
+.app {
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  background: #8B4513;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+.coffee-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.coffee-card {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.price {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #8B4513;
+}
+
+button {
+  background: #8B4513;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #A0522D;
+}
+
+.cart {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 8px;
+  height: fit-content;
+}
+
+.cart-total {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+.clear-btn {
+  background: #dc3545;
+}
+
+.clear-btn:hover {
+  background: #c82333;
+}

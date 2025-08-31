@@ -1,8 +1,10 @@
 {
-  "name": "jenkins-demo-app",
+  "name": "jenkins-first-project",
   "version": "1.0.0",
   "scripts": {
-    "test": "node test.js",
-    "start": "node app.js"
+    "install": "cd coffee-shop && npm install",
+    "test": "cd coffee-shop && npm test -- --coverage --watchAll=false",
+    "build": "cd coffee-shop && npm run build",
+    "start": "cd coffee-shop && npm start"
   }
 }

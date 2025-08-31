@@ -4,25 +4,26 @@ pipeline {
     stages {
         stage('Install Dependencies') {
             steps {
-                sh 'npm install'
+                sh 'cd coffee-shop && npm install'
             }
         }
 
         stage('Run Tests') {
             steps {
-                sh 'npm test'
+                sh 'cd coffee-shop && npm test -- --coverage --watchAll=false'
             }
         }
 
         stage('Build') {
             steps {
-                sh 'npm run build'
+                sh 'cd coffee-shop && npm run build'
             }
         }
 
         stage('Deploy') {
             steps {
-                echo 'Deploying application...'
+                echo 'Deploying coffee webapp...'
+                sh 'cd coffee-shop && ls -la build/'
             }
         }
     }
