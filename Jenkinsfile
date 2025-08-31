@@ -2,12 +2,6 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout') {
-            steps {
-                git 'https://github.com/31RahulPatel/Jenkins-first-project.git'
-            }
-        }
-
         stage('Install Dependencies') {
             steps {
                 sh 'npm install'
@@ -22,13 +16,13 @@ pipeline {
 
         stage('Build') {
             steps {
-                echo 'Building the project...'
+                sh 'npm run build'
             }
         }
 
         stage('Deploy') {
             steps {
-                echo 'Deploying the app (simulation)...'
+                echo 'Deploying application...'
             }
         }
     }
